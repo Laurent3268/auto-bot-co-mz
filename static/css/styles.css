@@ -1,0 +1,168 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+}
+
+header nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header ul li {
+    margin-left: 20px;
+}
+
+header ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header ul li a:hover {
+    color: #ff6347;
+}
+
+.hero {
+    background: url('https://via.placeholder.com/1920x800') no-repeat center center/cover;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero .overlay {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.hero h2 {
+    margin: 0;
+    font-size: 48px;
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.container {
+    margin: 50px auto;
+    max-width: 800px;
+    text-align: center;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.container h2 {
+    margin: 0;
+    font-size: 28px;
+    color: #333;
+}
+
+.form-group {
+    margin: 20px 0;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#log-container {
+    margin-top: 20px;
+    text-align: left;
+}
+
+/* Estilos existentes... */
+
+.estrategia-message {
+    background-color: #fcf8e3;
+    color: #8a6d3b;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+/* Estilos existentes... */
+
+.estrategia-message {
+    background-color: #fcf8e3;
+    color: #8a6d3b;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+.green-message {
+    background-color: #dff0d8;
+    color: #3c763d;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+.loss-message {
+    background-color: #f2dede;
+    color: #a94442;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+    font-weight: bold;
+}
