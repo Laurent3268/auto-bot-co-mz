@@ -7,7 +7,10 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 from threading import Thread
+from selenium.webdriver.chrome.service import Service
 
+
+      
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret!'
 socketio = SocketIO(app)
@@ -34,8 +37,7 @@ class SeleniumThread(Thread):
         socketio.emit('log_message', {'message': "Iniciando o bot de apostas automáticas..."})
 
         options = Options()
-        options.add_argument("--window-size=920,580")
-
+        options.add_argument("--headless")
         options.add_argument("--disable-logging")
         options.add_argument("--no-sandbox")
         options.add_argument("--disable-dev-shm-usage")
@@ -43,9 +45,13 @@ class SeleniumThread(Thread):
         options.add_argument("--disable-popup-blocking")
         options.add_argument("--disable-blink-features=AutomationControlled")
 
-        self.driver = webdriver.Chrome(options=options)
+        # Adicione o caminho do ChromeDriver para ser otimizado no Vercel
+        self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
         try:
+            # O resto do código permanece o mesmo
+
+            # Handle exception
             self.driver.get('https://www.megagamelive.com/login')
             time.sleep(3)
             self.driver.find_element(By.XPATH, '//*[@id="username_l"]').send_keys(self.user)
